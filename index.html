@@ -253,7 +253,7 @@
                     <img src="${elem.story}">
                     
                     <div class="likeShareSvg">
-                    <i class="ri-heart-3-line"></i>
+                     <i class="ri-heart-3-fill"></i>
                             <i class="ri-chat-3-line"></i>
                             <i class="ri-share-forward-line"></i>
                             </div>
@@ -306,7 +306,23 @@
             stories.scrollLeft += event.deltaY;
         })
         
-        // Click-and-Drag Scrolling
+        // like button 
+        const heart = document.querySelector(".ri-heart-3-fill");
+        let liketoggle = false;
+        heart.addEventListener("click",function(event){
+            event.preventDefault();
+            if(liketoggle === false){
+                likecount +=1
+            heart.style.color = "red"
+            liketoggle = true;
+        }
+        else{
+            heart.style.color = "white"
+            likecount -=1
+            liketoggle = false;
+
+        }
+        })
         </script>
 </body>
 
