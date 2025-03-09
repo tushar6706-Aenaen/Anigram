@@ -334,4 +334,8 @@ main::-webkit-scrollbar {
         width: 80vw;
         
     }
+    .story {
+        height: 60px; /* Even smaller for smaller screens */
+        width: 60px;
+    }
 }
